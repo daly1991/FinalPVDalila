@@ -1,0 +1,141 @@
+﻿@model  List<FinalPVDalila.Models.RegistroBiopsia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<head>
+    <style>
+        .heading {
+            color: darkred;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Biopsias Recepcionadas</h1>
+
+</body>
+
+
+@Html.ActionLink("Agregar", "CargadeDatos", "ProgVisual", null, new { @class = "btn btn-primary" })
+
+<head>
+    <style>
+        body {
+            background-image: url("https://d328k6xhl3lmif.cloudfront.net/images/default-source/default-album/laboratorios-reduc-02.jpg?sfvrsn=d00a03cb_0");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+           
+        }
+    </style>
+</head>
+<body>
+</body>
+
+
+
+<table class="table table-responsive">
+
+    <thead>
+        <tr>
+
+            <th>
+                Paciente
+            </th>
+
+            <th>
+                Edad
+            </th>
+
+            <th>
+                Internación
+            </th>
+
+            <th>
+                Muestra
+            </th>
+
+            <th>
+                Método
+            </th>
+
+            <th>
+                Protocolo
+            </th>
+
+            <th>
+                Especialidad
+            </th>
+
+            <th>
+                Fecha de Entrega
+            </th>
+            <th>
+                Acciones
+            </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+
+        @foreach (FinalPVDalila.Models.RegistroBiopsia bi in @Model)
+
+        {
+        <tr>
+
+
+            <td>
+                @bi.Paciente.NombreApellido
+            </td>
+
+
+            <td>
+                @bi.Edad
+            </td>
+
+            <td>
+                @bi.Internación
+
+            </td>
+
+            <td>
+                @bi.Muestra
+            </td>
+
+            <td>
+                @bi.Método
+            </td>
+
+            <td>
+                @bi.Protocolo
+            </td>
+
+            <td>
+                @bi.Especialidad
+            </td>
+
+            <td>
+                @bi.FechadeEntrega
+            </td>
+
+            <td>
+                @Html.ActionLink("Editar", "Editar", "ProgVisual", new { ID = bi.IdRegistro }, new { @class = "btn btn-primary" })
+
+
+
+                @Html.ActionLink("Eliminar", "Eliminar", "ProgVisual", new { ID = bi.IdRegistro }, new { @class = "btn btn-primary" })
+            </td>
+
+        </tr>
+
+        }
+
+
+    </tbody>
+</table>

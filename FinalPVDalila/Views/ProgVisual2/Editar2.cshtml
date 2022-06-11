@@ -1,0 +1,124 @@
+﻿@model FinalPVDalila.Models.RegistroPiezaAnatomica
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2 class="fondo1">Registro de Piezas Anatómicas</h2>
+
+
+
+<head>
+    <style>
+        .heading {
+            color: black;
+            text-align: center
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Servicio de Anatomia Patológica-Morgue del Hospital Posadas</h1>
+
+</body>
+
+
+
+
+
+
+<head>
+    <style>
+        body {
+            background-image: url("https://www.anditecnica.com/img/simulacion/anatomiahead.jpg");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+     
+        }
+    </style>
+</head>
+<body>
+</body>
+
+
+
+<form action="/ProgVisual2/Edicion2" method="post">
+
+
+
+
+    <div class="container">
+
+
+
+        <div class="form-group">
+            <label for="txtPaciente2Nombre" name="lblPaciente2Nombre">Nombre del Paciente:</label>
+            <input class="form-control" type="text" value="@Model.Paciente2.Nombre"name=txtPaciente2Nombre id="txtPaciente2Nombre" />
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="txtPaciente2Apellido" name="lblPaciente2Apellido">Apellido del Paciente:</label>
+            <input class="form-control" type="text" value="@Model.Paciente2.Apellido"name=txtPaciente2Apellido id="txtPaciente2Apellido" />
+        </div>
+
+
+        <div class="form-group">
+            <label for="txtEdad" name="lblEdad">Edad:</label>
+            <input class="form-control" type="text" value="@Model.Edad2"name=txtEdad id="txtEdad" />
+        </div>
+
+        <div class="form-group">
+            <label for="Internación" name="lblInternación">Internación:</label>
+            <input class="form-control" type="text" value="@Model.Internación2"name=txtInternación id="txtInternación" />
+        </div>
+
+        <div class="form-group">
+            <label for="Muestra" name="lblMuestra">Muestra:</label>
+            <input class="form-control" type="text" value="@Model.Muestra2"name=txtMuestra id="txtMuestra" />
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label for="selMétodo" name="lblMétodo" id="lblMétodo">Seleccione un Método:</label>
+            <select class="form-control" value="@Model.Método2"name="selMétodo">
+                <option value="Congelación">Cremación</option>
+                <option value="Diferido">Disección</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="txtProtocolo" name="lblProtocolo">Protocolo:</label>
+            <input class="form-control" type="text" value="@Model.Protocolo2"name=txtProtocolo id="txtProtocolo" />
+        </div>
+
+        <div class="form-group">
+            <label for="Especialidad" name="lblEspecialidad">Especialidad:</label>
+            <input class="form-control" type="text" value="@Model.Especialidad2"name=txtEspecialidad id="txtEspecialidad" />
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label for="FechadeEntrega" name="lblFechadeEntrega">Fecha de Entrega:</label>
+            <input class="form-control" type="date" value="@Model.FechadeEntrega2"name=txtFechadeEntrega id="txtFechadeEntrega" />
+        </div>
+
+      
+
+
+        <input type="submit" class="btn btn-primary" value="Guardar" onclick="mostrarMensaje()" />
+    </div>
+</form>
+
+
+

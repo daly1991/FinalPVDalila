@@ -1,0 +1,141 @@
+﻿@model FinalPVDalila.Models.RegistroPiezaAnatomica
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .fondo1 {
+            color: white;
+            text-align: left
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <h2 class="fondo1">Registro de Piezas Anatómicas</h2>
+
+</body>
+
+    <head>
+        <style>
+            .heading {
+                color: black;
+                text-align: center
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+
+        <h1 class="heading">Servicio de Anatomia Patológica-Morgue del Hospital Posadas</h1>
+
+    </body>
+
+
+
+
+
+    <head>
+        <style>
+
+            body {
+                background-image: url("https://www.mozaweb.com/es/mozaik3D/BIO/ember/human_body_for_kids/960.jpg");
+                background-size: 100% 100%;
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+
+
+    <div id="divErrores"></div>
+
+    <form action="/ProgVisual2/ProgVisual2" method="post" onsubmit="return ValidarFormulario2()">
+
+
+
+        <div class="container">
+
+
+
+            <div class="form-group">
+
+                <label for="txtPaciente2Nombre" name="lblPaciente2Nombre">Nombre del Paciente:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtPaciente2Nombre id="txtPaciente2Nombre" placeholder="Ingrese el nombre" required />
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="txtPaciente2Apellido" name="lblPaciente2Apellido">Apellido del Paciente:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtPaciente2Apellido id="txtPaciente2Apellido" placeholder="Ingrese el apellido" required />
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="txtEdad2" name="lblEdad2">Edad:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtEdad2 id="txtEdad2" placeholder="Ingrese la edad" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Internación2" name="lblInternación2">Internación:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtInternación2 id="txtInternación2" placeholder="Ingrese la internación" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Muestra2" name="lblMuestra2">Muestra:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtMuestra2 id="txtMuestra2" PLACEHOLDER="Ingrese la muestra" required />
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <label for="selMétodo2" name="lblMétodo2" id="lblMétodo2">Seleccione un Método:</label>
+                <select class="form-control" name="selMétodo2" onkeypress="BorrarErrores()" required>
+                    <option value="Congelación">Cremación</option>
+                    <option value="Diferido">Disección</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="txtProtocolo2" name="lblProtocolo2">Protocolo:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtProtocolo2 id="txtProtocolo2" placeholder="Ingrese el protocolo" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Especialidad2" name="lblEspecialidad2">Especialidad:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtEspecialidad2 id="txtEspecialidad2" placeholder="Ingrese la especialidad" required />
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <label for="FechadeEntrega2" name="lblFechadeEntrega2">Fecha de Entrega:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="date" name=txtFechadeEntrega2 id="txtFechadeEntrega2" required />
+            </div>
+         
+
+
+            <input type="submit" class="btn btn-primary" value="Guardar" onclick="mostrarMensaje()" />
+
+        </div>
+
+    </form>
+
+
+

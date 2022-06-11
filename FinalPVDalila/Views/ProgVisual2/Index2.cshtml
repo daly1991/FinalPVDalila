@@ -1,0 +1,142 @@
+﻿@model  List<FinalPVDalila.Models.RegistroPiezaAnatomica>
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<head>
+    <style>
+        .heading {
+            color: black;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Piezas Anatómicas Recepcionadas</h1>
+
+</body>
+
+
+@Html.ActionLink("Agregar", "CargadeDatos2", "ProgVisual2", null, new { @class = "btn btn-primary" })
+
+<head>
+    <style>
+        body {
+            background-image: url("https://ondasyparticulas.com/wp-content/uploads/2020/11/Anatomia-2-1024x576.png");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+           
+    </style>
+</head>
+<body>
+</body>
+
+
+
+<table class="table table-responsive">
+
+    <thead>
+        <tr>
+
+            <th>
+                Paciente
+            </th>
+
+            <th>
+                Edad
+            </th>
+
+            <th>
+                Internación
+            </th>
+
+            <th>
+                Muestra
+            </th>
+
+            <th>
+                Método
+            </th>
+
+            <th>
+                Protocolo
+            </th>
+
+            <th>
+                Especialidad
+            </th>
+
+            <th>
+                Fecha de Entrega
+            </th>
+            <th>
+                Acciones
+            </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+
+        @foreach (FinalPVDalila.Models.RegistroPiezaAnatomica pa in @Model)
+
+        {
+            <tr>
+
+
+                <td>
+                    @pa.Paciente2.NombreApellido
+                </td>
+
+
+                <td>
+                    @pa.Edad2
+                </td>
+
+                <td>
+                    @pa.Internación2
+
+                </td>
+
+                <td>
+                    @pa.Muestra2
+                </td>
+
+                <td>
+                    @pa.Método2
+                </td>
+
+                <td>
+                    @pa.Protocolo2
+                </td>
+
+                <td>
+                    @pa.Especialidad2
+                </td>
+
+                <td>
+                    @pa.FechadeEntrega2
+                </td>
+
+                <td>
+                    @Html.ActionLink("Editar", "Editar2", "ProgVisual2", new { ID = pa.IdRegistroPA }, new { @class = "btn btn-primary" })
+
+
+
+                    @Html.ActionLink("Eliminar", "Eliminar2", "ProgVisual2", new { ID = pa.IdRegistroPA }, new { @class = "btn btn-primary" })
+                </td>
+
+            </tr>
+
+        }
+
+
+    </tbody>
+</table>

@@ -1,0 +1,120 @@
+﻿
+@model FinalPVDalila.Models.RegistroBiopsia
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+    <h2 class="fondo1">Registro de Biopsias</h2>
+
+
+
+    <head>
+        <style>
+            .heading {
+                color: white;
+                text-align: center
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="heading">Servicio de Anatomia Patológica del Hospital Posadas</h1>
+
+    </body>
+
+
+
+
+
+
+    <head>
+        <style>
+            body {
+                background-image: url("https://www.itep.es/wp-content/uploads/2020/10/Te%CC%81cnico-Superior-en-Anatomi%CC%81a-Patolo%CC%81gica.jpg");
+                background-size: 100% 100%;
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+
+
+
+    <div id="divErrores"></div>
+
+    <form action="/ProgVisual/ProgVisual" method="post" onsubmit="return ValidarFormulario()">
+
+
+
+        <div class="container">
+
+
+
+
+
+            <div class="form-group">
+                <label for="txtPacienteNombre" name="lblPacienteNombre">Nombre del Paciente:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtPacienteNombre id="txtPacienteNombre" placeholder="Ingrese un nombre" required />
+            </div>
+
+
+            <div class="form-group">
+                <label for="txtPacienteApellido" name="lblPacienteApellido">Apellido del Paciente:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtPacienteApellido id="txtPacienteApellido" placeholder="Ingrese un apellido" required />
+            </div>
+
+            <div class="form-group">
+                <label for="txtEdad" name="lblEdad">Edad:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtEdad id="txtEdad" placeholder="ingrese la edad" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Internación" name="lblInternación">Internación:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtInternación id="txtInternación" placeholder="Ingrese la internación" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Muestra" name="lblMuestra">Muestra:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtMuestra id="txtMuestra" placeholder="Ingrese la muestra" required />
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <label for="selMétodo" name="lblMétodo" id="lblMétodo">Seleccione un Método:</label>
+                <select class="form-control" name="selMétodo" onkeypress="BorrarErrores()" required>
+                    <option value="Congelación">Congelación</option>
+                    <option value="Diferido">Diferido</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="txtProtocolo" name="lblProtocolo">Protocolo:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtProtocolo id="txtProtocolo" placeholder="Ingrese el protocolo" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Especialidad" name="lblEspecialidad">Especialidad:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="text" name=txtEspecialidad id="txtEspecialidad" placeholder="Ingrese la especialidad" required />
+            </div>
+
+
+
+
+
+            <div class="form-group">
+                <label for="FechadeEntrega" name="lblFechadeEntrega">Fecha de Entrega:</label>
+                <input class="form-control" onkeypress="BorrarErrores()" type="date" name=txtFechadeEntrega id="txtFechadeEntrega" required />
+            </div>
+
+
+
+            <input type="submit" class="btn btn-primary" value="Guardar" onclick="mostrarMensaje()" />
+        </div>
+    </form>
+
+

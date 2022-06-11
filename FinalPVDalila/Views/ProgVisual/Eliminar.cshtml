@@ -1,0 +1,130 @@
+﻿@model FinalPVDalila.Models.RegistroBiopsia
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<h2 class="fondo1">Registro de Biopsias</h2>
+
+
+
+<head>
+    <style>
+        .heading {
+            color: black;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Servicio de Anatomia Patológica del Hospital Posadas</h1>
+
+</body>
+
+
+
+
+
+
+<head>
+    <style>
+        body {
+            background-image: url("https://2.bp.blogspot.com/-vPwaqVU-9-A/XL-84VF3SLI/AAAAAAAACh4/tOJyoo9zIOQyQY_jyruJKD8HLGM6Po4bACLcBGAs/w600/anatomia_humana_bloghemia.jpg");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+</body>
+
+
+
+<form action="/ProgVisual/Eliminacion" method="post">
+
+   
+
+
+    <div class="container">
+
+
+
+        <div class="form-group">
+
+
+            <input type="hidden" id="hdnID" name="hdnID" value="@Model.IdRegistro" />
+
+
+
+
+            <label for="txtPacienteNombre" name="lblPacienteNombre">Nombre del Paciente:</label>
+            <input class="form-control" type="text" value="@Model.Paciente.Nombre" name=txtPacienteNombre id="txtPacienteNombre" disabled />
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="txtPacienteApellido" name="lblPacienteApellido">Apellido del Paciente:</label>
+            <input class="form-control" type="text" value="@Model.Paciente.Apellido" name=txtPacienteApellido id="txtPacienteApellido" disabled/>
+        </div>
+
+
+        <div class="form-group">
+            <label for="txtEdad" name="lblEdad">Edad:</label>
+            <input class="form-control" type="text" value="@Model.Edad" name=txtEdad id="txtEdad" disabled/>
+        </div>
+
+        <div class="form-group">
+            <label for="Internación" name="lblInternación">Internación:</label>
+            <input class="form-control" type="text" value="@Model.Internación" name=txtInternación id="txtInternación" disabled/>
+        </div>
+
+        <div class="form-group">
+            <label for="Muestra" name="lblMuestra">Muestra:</label>
+            <input class="form-control" type="text" value="@Model.Muestra" name=txtMuestra id="txtMuestra" disabled/>
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label for="selMétodo" name="lblMétodo" id="lblMétodo">Seleccione un Método:</label>
+            <select class="form-control" value="@Model.Método" name="selMétodo" disabled>
+                <option value="Congelación">Congelación</option>
+                <option value="Diferido">Diferido</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="txtProtocolo" name="lblProtocolo">Protocolo:</label>
+            <input class="form-control" type="text" value="@Model.Protocolo" name=txtProtocolo id="txtProtocolo" disabled/>
+        </div>
+
+        <div class="form-group">
+            <label for="Especialidad" name="lblEspecialidad">Especialidad:</label>
+            <input class="form-control" type="text" value="@Model.Especialidad" name=txtEspecialidad id="txtEspecialidad" disabled />
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label for="FechadeEntrega" name="lblFechadeEntrega">Fecha de Entrega:</label>
+            <input class="form-control" type="date" value="@Model.FechadeEntrega" name=txtFechadeEntrega id="txtFechadeEntrega" disabled/>
+        </div>
+
+     
+
+
+        <input type="submit" class="btn btn-primary" value="Eliminar" onclick="mostrarMensaje()" />
+    </div>
+</form>
+
+
+
